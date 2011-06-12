@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reddit Auto-Moderator</title>
+</head>
+<body>
+	<h1>Reddit Auto-Moderator</h1>
+
+	<div id="msg">
+		{{#url}}
+			<p><strong>URL:</strong> <a href="{{url}}">{{url}}</a></p>
+		{{/url}}
+		
+		{{#error}}
+			<p><strong>ERROR:</strong> Reddit had a problem completing the request.</p>
+		{{/error}}
+		
+		{{#nourl}}
+			<p>This system is designed to help submitters to sub-Reddits better understand what's happening with their posts and potentially self-moderate.</p>
+			<p>Do you have a post that could be stuck in moderation? Use the following form to check a URL:</p>
+			<form action="" method="GET">
+				<p>Reddit Post URL: <input type="text" name="url" size="40" value="{{referer}}" /><br/>
+					<small>(For example: <em>http://www.reddit.com/r/fffffffuuuuuuuuuuuu/comments/edj1w/changing_wifes_tire_true_story/</em>)</small></p>
+				<p><input type="submit" value="Check Reddit Post" /></p>
+				<p><strong>Note:</strong> You are only allowed to do 5 URL checks per day.</p>
+			</form>
+		{{/nourl}}
+		
+		{{#wrongsub}}
+			<p>The URL that you submitted does that correspond to a currently-supported sub-Reddit.</p>
+		{{/wrongsub}}
+		
+		{{#showsub}}
+			<p>Right now the auto-moderation system only works in the following sub-Reddits:</p>
+			<ul>
+				{{#reddits}}
+					<li>{{.}}</li>
+				{{/reddits}}
+			</ul>
+		{{/showsub}}
+		
+		{{#invalid}}
+			<p>This doesn't appear to be a Reddit discussion URL. A proper URL has the form:
+				<br/><tt>http://www.reddit.com/r/somereddit/comments/id/the_name_of_the_post/</tt></p>
+		{{/invalid}}
+		
+		{{#nopost}}
+			<p>The post that you linked to does not appear to exist. Perhaps try submitting it again?</p>
+		{{/nopost}}
+		
+		{{#about}}
+			<p>This post appears to be just fine! It has {{up}} upvote(s) and {{down}} downvote(s).</p>
+		{{/about}}
+		
+		{{#approved}}
+			<p>This post was flagged (either by a user or the Reddit spam filter) but was then manually approved by <a href="http://reddit.com/user/{{user}}/">{{user}}</a>.</p>
+		{{/approved}}
+		
+		{{#removed}}
+			<p>This post was manually removed by a moderator of the {{reddit}} sub-Reddit for not following the guidelines of the community. If you wish to contend its removal, please contact the <a href="http://www.reddit.com/message/compose?to=%23{{reddit}}">{{reddit}} moderators</a>.</p>
+		{{/removed}}
+		
+		{{#flagged}}
+			<p>This post has been flagged (and hidden) by Reddit's spam filtering system. To simplify moderation we're allowing you to un-flag up to one post per day. Please use this tool responsibly.</p>
+			{{#id}}
+				<form action="" method="GET">
+					<input type="hidden" name="url" value="{{url}}"/>
+					<input type="hidden" name="id" value="{{id}}"/>
+					<input type="submit" value="Un-Flag My Post" /><br/>
+					<p><strong>Remember:</strong> You are only permitted one un-flagging per day - use it wisely!</p>
+				</form>
+			{{/id}}
+		{{/flagged}}
+		
+		{{#used}}
+			<p>Unfortunately you've already used your one un-flagging for today, you'll need to wait a full 24 hours before you can un-flag another post.</p>
+		{{/used}}
+		
+		{{#approved}}
+			<p>Your post has been removed from Reddit's spam queue. Sorry for the inconvenience!</p>
+		{{/approved}}
+		
+		{{#toomany}}
+			<p>Unfortunately you've already made 5 URL checks today and thus are not allowed to do any more. You will be allowed to do more requests tomorrow.</p>
+		{{/toomany}}
+		
+		{{#msg}}
+			{{msg}}
+		{{/msg}}
+	</div>
+</body>
+</html>
