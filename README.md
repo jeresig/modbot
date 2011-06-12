@@ -1,11 +1,11 @@
 Reddit Mod Bot
 ==============
 
-By John Resig http://ejohn.org/
+By John Resig http://ejohn.org/  
 MIT Licensed
 
-For support please visit:
-  http://reddit.com/r/modbot
+For support please visit:  
+http://reddit.com/r/modbot
 
 This project is a pair of bots designed to help sub-reddits moderate themselves in an easier fashion. At minimum the bots should drastically reduce the amount of time that moderaters spend dealing with issues stuck in the spam filter - and should noticably improve the overall experience for submitters.
 
@@ -30,11 +30,11 @@ The system only allows for spam-filtered posts to be moderated via this system. 
 
 Will spammers use this? Possibly. However the limitations that are in place are severe and prevent it from being useful for most spammers. And even if bad posts make it through, people can still report it for removal by the bot or the moderators can manually remove it themselves.
 
-How will this affect me?
+**How will this affect me?**
 
-Users: You will now have the tools that you need to gain insight into what's going on with your posts and possibly remove a post that has been stuck in Reddit's spam filter.
+**Users:** You will now have the tools that you need to gain insight into what's going on with your posts and possibly remove a post that has been stuck in Reddit's spam filter.
 
-Moderators: Providing this tool should dramatically reduce the number of support requests that come in while still providing while generally keeping out first time (typically lower quality) posters.
+**Moderators:** Providing this tool should dramatically reduce the number of support requests that come in while still providing while generally keeping out first time (typically lower quality) posters.
 
 Man_is_Good
 ===========
@@ -45,11 +45,11 @@ Using this logic, combined with the automatic removal of comments and posts that
 
 Naturally users will still be able to check on the status of their posts on the provided web application - but it's doubtful that they will need to as their posts will always be working as they expect it to.
 
-How will this affect me?
+**How will this affect me?**
 
-Users: Every post you make in a sub-reddit that uses the Man_is_Good bot will get posted, none of them will get caught in the spam filter. There's no guarantee that your post won't get removed later but at least it won't be because of the spam filter.
+**Users:** Every post you make in a sub-reddit that uses the Man_is_Good bot will get posted, none of them will get caught in the spam filter. There's no guarantee that your post won't get removed later but at least it won't be because of the spam filter.
 
-Moderators: This will likely generate an increase in lower quality posts but will drastically reduce the number of support requests that you get - not to mention that your sub-reddit users will be happier since their posts will always go live.
+**Moderators:** This will likely generate an increase in lower quality posts but will drastically reduce the number of support requests that you get - not to mention that your sub-reddit users will be happier since their posts will always go live.
 
 How to Use
 ==========
@@ -60,13 +60,13 @@ It's assumed that if you're reading this then you're already a moderator of a su
 
 Moderators, read on:
 
-Step 1: You first need to decide which style of moderation you want to use (Man_is_Evil or Man_is_Good). Once you've made that decision all you need to do is add either user as a new moderator to your sub-reddit. The bot will automatically start watching your sub-reddit within 10-15 minutes.
+**Step 1:** You first need to decide which style of moderation you want to use (Man_is_Evil or Man_is_Good). Once you've made that decision all you need to do is add either user as a new moderator to your sub-reddit. The bot will automatically start watching your sub-reddit within 10-15 minutes.
 
-Step 2: I highly recommend prominently linking to the page where users can check on their post status (but especially so if you're using Man_is_Evil). You can do this in the sidebar of your sub-reddit, or even elsewhere. Multiple options are as list below.
+**Step 2:** I highly recommend prominently linking to the page where users can check on their post status (but especially so if you're using Man_is_Evil). You can do this in the sidebar of your sub-reddit, or even elsewhere. Multiple options are as list below.
 
     Wondering where your post is? [Check Here!](http://reddit.com/)
 
-Step 3: There is some minor, optional, configuration. If you wish to change the minimum number of reports needed in order to remove a comment or a post you'll need to add some dummy links into the sidebar of your sub-reddit. The default for each option is '10' (in that if a comment is reported 10 times it is automatically removed or if a post is reported 10 times it is automatically removed). You can set the option to 0 if you wish to disable this feature entirely.
+**Step 3:** There is some minor, optional, configuration. If you wish to change the minimum number of reports needed in order to remove a comment or a post you'll need to add some dummy links into the sidebar of your sub-reddit. The default for each option is '10' (in that if a comment is reported 10 times it is automatically removed or if a post is reported 10 times it is automatically removed). You can set the option to 0 if you wish to disable this feature entirely.
 
 Increase the Minimum Number of Reports:
 
@@ -80,7 +80,8 @@ Disable Automatic Report Handling Entirely:
 
 With all that squared away you should be good-to-go! If you encounter any problems, please post to the /r/modbot sub-reddit.
 
-== Running Your Own Bot ==
+Running Your Own Bot
+====================
 
 If you wish to run your own bot you'll need to have Node.js installed and possibly have a working knowledge of JavaScript. You do not need to run your own but in order to take advantage of the above functionality, all of that is provided for you "free of charge" - just add one of the mod users and the system will do the rest.
 
