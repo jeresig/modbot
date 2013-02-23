@@ -16,7 +16,7 @@ That being said the two bots do have some common functionality: Both bots automa
 Man_is_Evil
 ===========
 
-By default Reddit makes the assumption that many new users (or first time posters) are evil (in that they're likely spammers). In general this is good as it helps to kepp spam to a minimum - in practice however many users' posts get stuck in the spam filter with absolutely no explanation. (Many users think they've been banned or that somehow the spam filter hates them - frequently becoming angry at the moderators or even angry at Reddit itself).
+By default Reddit makes the assumption that many new users (or first time posters) are evil (in that they're likely spammers). In general this is good as it helps to keep spam to a minimum - in practice however many users' posts get stuck in the spam filter with absolutely no explanation. (Many users think they've been banned or that somehow the spam filter hates them - frequently becoming angry at the moderators or even angry at Reddit itself).
 
 Man_is_Evil is a bot that's designed to build upon this basic premise but give users the tools that they need in order to help themselves when they get stuck.
 
